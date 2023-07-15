@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="grid grid-cols-5 h-screen w-screen" style="font-family: 'Poppins', sans-serif">
+      <div class="col-span-4 col-start-2">
+        <div class="h-full w-full bg-gray-50">
+          <div class="flex flex-row">
+            
+            <div class="flex flex-col p-8">
+              <img src="/rd.png" class="w-1/2 h-36 ml-32 mb-5" alt="">
+              <h2 class="text-4xl text-center border-b-2 border-indigo-700 p-3 text-indigo-700 font-bold mb-5">Let's Check the best rooms</h2>
+              <div class="text-gray-700 border-b pb-4 border-gray-300">
+                <span class="text-gray-500 block text-lg mt-5"> Number of customer* </span>
+                <label class="inline-flex items-center gap-x-2 mt-2 mr-5">
+                  <input type="radio" name="person" value="1" class="appearance-none h-5 w-5 rounded-full border border-slate-400 checked:border-blue-500 checked:ring-blue-500 checked:ring-4 checked:bg-transparent ring-inset bg-gray-100 duration-200" />
+                  <span class="">One</span>
+                </label>
+                <label class="inline-flex items-center gap-x-2 mr-5">
+                  <input type="radio" name="person" value="2" class="appearance-none h-5 w-5 rounded-full border border-slate-400 checked:border-blue-500 checked:ring-blue-500 checked:ring-4 checked:bg-transparent ring-inset bg-gray-100 duration-200" />
+                  <span class="">Two</span>
+                </label>
+              </div>
+              <label class="mt-5 flex items-center gap-4 relative border-b border-gray-300 pb-4">
+                <span class="text-gray-500 text-lg">Breakfast</span>
+                <input id="bf" type="checkbox" class="appearance-none h-5 w-5 rounded border border-slate-400 checked:border-blue-500 checked:bg-blue-500 bg-gray-100 duration-200" />
+                <span class="absolute translate-x-[6.4rem] text-white"
+                  ><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7Z" /></svg
+                ></span>
+              </label>
+              <div class="mt-5 gap-4 border-b border-gray-300">
+                <span class="block mb-2 text-lg text-gray-500">Room Type*</span>
+                <label class="inline-flex items-center gap-x-2 mt-2 mr-5">
+                  <input type="radio" name="room" value="ac" class="appearance-none h-5 w-5 rounded-full border border-slate-400 checked:border-blue-500 checked:ring-blue-500 checked:ring-4 checked:bg-transparent ring-inset bg-gray-100 duration-200" />
+                  <span class="">Air Conditioner (AC)</span>
+                </label>
+                <label class="inline-flex items-center gap-x-2 mt-2 mr-5">
+                  <input type="radio" name="room" value="ac" class="appearance-none h-5 w-5 rounded-full border border-slate-400 checked:border-blue-500 checked:ring-blue-500 checked:ring-4 checked:bg-transparent ring-inset bg-gray-100 duration-200" />
+                  <span class="">SUIT Rooms</span>
+                </label>
+                <label class="inline-flex items-center gap-x-2 mt-2 mr-5">
+                  <input type="radio" name="room" value="ac" class="appearance-none h-5 w-5 rounded-full border border-slate-400 checked:border-blue-500 checked:ring-blue-500 checked:ring-4 checked:bg-transparent ring-inset bg-gray-100 duration-200" />
+                  <span class="">Non Air Conditioner (NON-AC)</span>
+                </label>
+                <p id="warn" class="text-sm text-red-500 mt-1">‎ </p>
+              </div>
+              <button type="button" onclick="check()" class="mt-8 shadow shadow-gray-400 bg-indigo-600 text-white  font-medium px-4 py-2 rounded hover:bg-indigo-700 duration-100 w-1/2">Check</button>
+            </div>
+
+            <div id="bgs" class="duration-200 invisible opacity-0 flex translate-x-10 flex-col mt-32">
+              <img alt="gallery" class="w-full ring-1 ring-offset-2 ring-blue-200 h-60 rounded-lg object-cover object-center shadow-lg hover:shadow-none duration-200 shadow-gray-500 ml-3" src="/1.jpg">
+              <span id="rprice" class="text-xl text-indigo-800 mt-5 text-center ">Room Price Rs. {}</span>
+              <img src="/breakfast1.jpg" class="w-1/2 ml-24 mt-8 ring-1 ring-offset-2 ring-blue-200 h-32 rounded-lg object-cover object-center shadow-lg hover:shadow-none duration-200 shadow-gray-500 hover:scale-110">
+              <span id="bffd" class="text-xl text-blue-800 mt-5 text-center "></span>
+              <p id="total" class="text-center mt-3 text-xl font-bold"></p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
